@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-"""Writing a function for Pascal's Triangle"""
+"""Writ funct for pscal Triangle"""
 
 
 def pascal_triangle(n):
     """
-    returns a lists of integers
-    representing the Pascal’s triangle
+    ret a list of int
+    rep the pascal triagle
     """
     pascal = []
     if n <= 0:
