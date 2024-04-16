@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""Lockboxes Contains method that finds the keys to
-open other lockboxes
-"""
+"""Function to check if all lockboxes can be opened"""
 
 
 def canUnlockAll(boxes):
