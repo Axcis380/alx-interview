@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
-"""Writ funct for pscal Trgle"""
+"""Writ fnct for pscal Trngle"""
 
 
 def pascal_triangle(n):
     """
     ret a list of int
-    rep the pascal trgl
+    rep the pascal triale
     """
     pascal = []
     if n <= 0:
