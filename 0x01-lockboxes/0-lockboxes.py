@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-"""Lockoxes Contn mehod that find he lockboxes keys"""
+"""Lockboxes Contains method that finds the keys to
+open other lockboxes
+"""
+
+
 def canUnlockAll(boxes):
     unlocked = set()
 
