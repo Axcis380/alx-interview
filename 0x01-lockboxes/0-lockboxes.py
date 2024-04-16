@@ -12,7 +12,7 @@ def canUnlockAll(boxes):
         boxes (list): A list of lists representing lockboxes and their keys.
 
     Returns:
-        bool: True if all lockboxes can be opened, False otherwise.
+        bool: Tru if all lockboxes can be opened, False otherwise.
     """
     unlocked = set()
     num_boxes = len(boxes)
