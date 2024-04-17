@@ -1,16 +1,14 @@
 #!/usr/bin/python3
 """Function to check if all lockboxes can be opened"""
 
-
 def canUnlockAll(boxes):
     unlocked = set()
 
-    for box_id in range(len(boxes)):
-        box = boxes[box_id]
-        if len(box) == 0 or box_id in unlocked:
+    for box_id, box in enumerate(boxes):
+        if len(box) == 0 or box_id == 0:
             unlocked.add(box_id)
         for key in box:
-            if key < len(boxes):
+            if key < len(boxes) and key != box_id:
                 unlocked.add(key)
         if len(unlocked) == len(boxes):
             return True
