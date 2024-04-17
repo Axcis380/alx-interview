@@ -5,7 +5,7 @@
 def canUnlockAll(boxes):
     unlocked = set()
 
-    for box_id in range(len(boxes) - 1, -1, -1):
+    for box_id in range(len(boxes)):
         box = boxes[box_id]
         if len(box) == 0 or box_id in unlocked:
             unlocked.add(box_id)
