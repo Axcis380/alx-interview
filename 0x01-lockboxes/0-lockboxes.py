@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Function to check if all lockboxes can be opened"""
 
+
 def canUnlockAll(boxes):
     unlocked = set()
 
