@@ -20,11 +20,3 @@ def minOperations(n):
             now += start
             counter += 1
     return counter
-
-# Testing the function
-if __name__ == "__main__":
-    n = 4
-    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-
-    n = 12
-    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
