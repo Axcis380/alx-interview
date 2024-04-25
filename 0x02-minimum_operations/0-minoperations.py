@@ -1,22 +1,37 @@
+#!/usr/bin/python3
+
+"""
+    Method that determines the number of minimum operations given n characters
+"""
+
+
 def minOperations(n):
-    if n <= 1:
-        return n
+    """
+        A function that calculates the fewest number of operations
+        needed to give a result of exactly n H characters in a file
+        args: n: Number of characters to be displayed
+        return:
+               number of min operations
+    """
 
-    # Initialize the minimum number of operations required for each position
-    min_ops = [0] * (n + 1)
-
-    for i in range(2, n + 1):
-        min_ops[i] = float('inf')
-        for j in range(1, i):
-            # If i is divisible by j, it means that you can obtain i by copying j times and pasting i//j times
-            if i % j == 0:
-                min_ops[i] = min(min_ops[i], min_ops[j] + i // j)
-
-    return min_ops[n]
+    now = 1
+    start = 0
+    counter = 0
+    while now < n:
+        remainder = n - now
+        if remainder % now == 0:
+            start = now
+            now += start
+            counter += 2
+        else:
+            now += start
+            counter += 1
+    return counter
 
 # Testing the function
-n = 4
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+if __name__ == "__main__":
+    n = 4
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
 
-n = 12
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
+    n = 12
+    print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
