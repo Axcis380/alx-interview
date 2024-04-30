@@ -39,7 +39,14 @@ def print_statistics(total_file_size, status_codes_stats):
 
 
 def update_metrics(line, total_file_size, status_codes_stats):
-    
+       '''Updates the metrics from a given HTTP request log.
+
+    Args:
+        line (str): The line of input from which to retrieve the metrics.
+
+    Returns:
+        int: The new total file size.
+    ''' 
     line_info = extract_input(line)
     status_code = line_info.get('status_code', '0')
     if status_code in status_codes_stats.keys():
