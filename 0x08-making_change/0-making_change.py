@@ -4,8 +4,8 @@
 
 
 def makeChange(coins, total):
-    """Determine number of coins needed to met a giv
-    amount totl wen givena pile of coinof difrent valu.
+    """Determ numbof coin needed to met a giv
+    amnt totl wen givena pil of coinof difrent valu.
     """
     if total <= 0:
         return 0
